@@ -56,7 +56,7 @@ class handler(requestsManager.asyncRequestHandler):
 				log.debug("Good, We got {} from {}".format(content, username))
 				self.write("ok")
 			except:
-				self.write("Not yet")
+				self.write("Please check the discord for current status.")
 
 			return
 		except exceptions.need2FAException:

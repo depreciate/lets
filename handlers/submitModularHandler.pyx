@@ -630,8 +630,8 @@ class handler(requestsManager.asyncRequestHandler):
 
 					# Then post them!
 					if glob.conf.config["discord"]["enable"]:
-						webhook = Webhook(url, color=0xadd8e6, footer="This score was submitted on osu!Ainu")
-						webhook.set_author(name=username.encode().decode("ASCII", "ignore"), icon='https://a.ainu.pw/{}'.format(userID))
+						webhook = Webhook(url, color=0xadd8e6, footer="Thanks for playing!")
+						webhook.set_author(name=username.encode().decode("ASCII", "ignore"), icon='https://a.theosurealm.tk/{}'.format(userID))
 						webhook.set_title(title=f"New score by {username}!")
 						webhook.set_desc("[{}] Achieved #1 on mode **{}**, {} +{}!".format("RELAX" if UsingRelax else "VANILLA", gameModes.getGamemodeFull(s.gameMode), beatmapInfo.songName.encode().decode("ASCII", "ignore"), ScoreMods))
 						webhook.add_field(name='Total: {}pp'.format(float("{0:.2f}".format(s.pp))), value='Gained: +{}pp'.format(float("{0:.2f}".format(ppGained))))
